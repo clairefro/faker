@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { Finance } from './finance';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -167,7 +168,7 @@ export class Faker {
   readonly company = new (require('./company'))(this);
   readonly database = new (require('./database'))(this);
   readonly date = new (require('./date'))(this);
-  readonly finance = new (require('./finance'))(this);
+  readonly finance = new Finance(this);
   readonly git = new (require('./git'))(this);
   readonly hacker = new (require('./hacker'))(this);
   // TODO @Shinigami92 2022-01-12: iban was not used
