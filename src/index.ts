@@ -1,6 +1,7 @@
 import { Datatype } from './datatype';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
+import { Unique } from './unique';
 
 export interface FakerOptions {
   locales?: string[];
@@ -152,7 +153,7 @@ export class Faker {
   seedValue?: any[] | any;
 
   readonly fake = new (require('./fake'))(this).fake;
-  readonly unique = new (require('./unique'))(this).unique;
+  readonly unique = new Unique().unique;
 
   readonly mersenne: Mersenne = new Mersenne();
   random: Random = new Random(this);
